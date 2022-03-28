@@ -1,0 +1,12 @@
+metadata:
+  project: default
+spec:
+  name: acme 
+  protocol: HTTP
+  domain: acme.avi.tanzu-demo.com
+  port: 3000
+  path: "/"
+  healthThreshold: 3
+  certificate_id: ''
+  external_port: 80
+  interval: 10

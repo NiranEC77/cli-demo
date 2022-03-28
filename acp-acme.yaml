@@ -1,0 +1,134 @@
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-shopping-catalog
+spec:
+  destination:
+    service_group:
+    - name: sg-catalog
+  source: 
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-shopping-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source:
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-shopping-order
+spec:
+  destination:
+    service_group:
+    - name: sg-order
+  source:
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - {}
+---  
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-shopping-cart
+spec:
+  destination:
+    service_group:
+    - name: sg-cart
+  source:
+    service_group:
+    - name: sg-shopping
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-order-ordermongo
+spec:
+  destination:
+    service_group:
+    - name: sg-order-mongo
+  source:
+    service_group:
+    - name: sg-order
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-order-payment
+spec:
+  destination:
+    service_group:
+    - name: sg-payment
+  source:
+    service_group:
+    - name: sg-order
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-catalog-catalogmongo
+spec:
+  destination:
+    service_group:
+    - name: sg-catalog-mongo
+  source:
+    service_group:
+    - name: sg-catalog
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-users-usersmongo
+spec:
+  destination:
+    service_group:
+    - name: sg-users-mongo
+  source:
+    service_group:
+    - name: sg-users
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-cart-cartredis
+spec:
+  destination:
+    service_group:
+    - name: sg-cart-redis
+  source:
+    service_group:
+    - name: sg-cart
+  action: ALLOW
+  match:
+  - {}

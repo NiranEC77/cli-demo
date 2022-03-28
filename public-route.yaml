@@ -1,0 +1,10 @@
+metadata:
+  project: default
+  global-namespace: acme
+  public-service: acme.avi-tsm.tanzu-demo.com
+  route: shopping.3000
+spec:
+  paths:
+  - "/"
+  target: shopping
+  target_port: 3000

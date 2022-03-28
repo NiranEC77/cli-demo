@@ -1,0 +1,179 @@
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-catalog
+spec:
+  id: sg-catalog
+  display_name: sg-catalog
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-shopping
+spec:
+  id: sg-shopping
+  display_name: sg-shopping
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: shopping
+    rules: []
+  description: ''
+  color: ''
+---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-order
+spec:
+  id: sg-order
+  display_name: sg-order
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-order-mongo
+spec:
+  id: sg-order-mongo
+  display_name: sg-order-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: order-mongo
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-users
+spec:
+  id: sg-users
+  display_name: sg-users
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-users-mongo
+spec:
+  id: sg-users-mongo
+  display_name: sg-users-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: users-mongo
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-cart
+spec:
+  id: sg-cart
+  display_name: sg-cart
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart
+    rules: []
+  description: ''
+  color: ''
+  ---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-payment
+spec:
+  id: sg-payment
+  display_name: sg-payment
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: payment
+    rules: []
+  description: ''
+  color: ''
+---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-catalog-mongo
+spec:
+  id: sg-catalog
+  display_name: sg-catalog-mongo
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: catalog-mongo
+    rules: []
+  description: ''
+  color: ''
+---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-cart-redis
+spec:
+  id: sg-catalog
+  display_name: sg-cart-redis
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: cart-redis
+    rules: []
+  description: ''
+  color: ''

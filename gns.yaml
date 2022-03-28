@@ -1,0 +1,102 @@
+metadata:
+    project: default
+    global-namespace: acme
+spec:
+  name: acme
+  domain: acme.lab 
+  useSharedGateway: true
+  ca: default
+  caType: PreExistingCA
+  matchingConditions:
+  - namespace:
+      match: default
+      type: EXACT
+    cluster:
+      match: aws-tmc-us-east
+      type: EXACT
+  - namespace:
+      match: default
+      type: EXACT
+    cluster:
+      match: aws-tmc-us-west
+      type: EXACT
+  - namespace:
+      match: default
+      type: EXACT
+    cluster:
+      match: azure-aks-us-east
+      type: EXACT
+  - namespace:
+      match: default
+      type: EXACT
+    cluster:
+      match: azure-aks-us-west
+      type: EXACT
+api_discovery_enabled: true
+---
+metadata:
+  project: default
+  global-namespace: acme
+  public-service: acme.avi-tsm.tanzu-demo.com
+spec:
+  fqdn: acme.avi-tsm.tanzu-demo.com
+  name: ''
+  external_port: 80
+  external_protocol: HTTP
+  ttl: 300
+  public_domain:
+    external_dns_id: 05f98286-64f0-4211-bd20-1d848315b249
+    primary_domain: avi-tsm.tanzu-demo.com
+    sub_domain: acme
+    certificate_id: ''
+  ha_policy: ''
+  gslb:
+    type: ROUND_ROBIN
+  wildcard_certificate_id: ''
+  healthcheck_ids:
+  - 8e3f0527-376c-4efa-8ede-43c0e53c77ea
+---
+metadata:
+  project: default
+  global-namespace: acme
+  public-service: acme.avi-tsm.tanzu-demo.com
+  route: shopping.3000
+spec:
+  paths:
+  - "/"
+  target: shopping
+  target_port: 3000
+---
+metadata:
+  project: default
+  global-namespace: acme
+  api-discovery: apidisc
+spec:
+  selectors:
+    services:
+    - "*"
+    all_services: true
+    all_public_services: true
+  application:
+  - mime_config: {}
+    use_default_response_codes_whitelist: 'true'
+---
+metadata:
+  project: default
+  global-namespace: acme
+  pii-discovery: datadisc
+spec:
+  selectors:
+    services:
+    - "*"
+    all_services: true
+    all_public_services: true
+  application:
+  - rule:
+      enable_offline: 'true'
+      dlp_config:
+        matching_policy:
+          pattern_groups:
+          - Default
+          - US PII Data
+      mime_config: {}

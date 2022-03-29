@@ -99,4 +99,7 @@ spec:
           pattern_groups:
           - Default
           - US PII Data
+          - PCI DSS
+          - Default
+          - US SSN Confidentiality Law
       mime_config: {}

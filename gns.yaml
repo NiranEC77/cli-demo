@@ -32,7 +32,7 @@ spec:
     cluster:
       match: azure-aks-us-west
       type: EXACT
-api_discovery_enabled: true
+apiDiscoveryEnabled: true
 ---
 metadata:
   project: default

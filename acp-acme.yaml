@@ -162,4 +162,18 @@ spec:
   action: ALLOW
   match:
   - {}
-
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-payment-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source:
+    service_group:
+    - name: sg-payment
+  action: ALLOW
+  match:
+  - {}

@@ -132,3 +132,34 @@ spec:
   action: ALLOW
   match:
   - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-users-userredis
+spec:
+  destination:
+    service_group:
+    - name: sg-user-redis
+  source:
+    service_group:
+    - name: sg-users
+  action: ALLOW
+  match:
+  - {}
+---
+metadata:
+  project: default
+  global-namespace: acme
+  access-control-policy: allow-cart-users
+spec:
+  destination:
+    service_group:
+    - name: sg-users
+  source:
+    service_group:
+    - name: sg-cart
+  action: ALLOW
+  match:
+  - {}
+

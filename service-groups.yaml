@@ -177,3 +177,21 @@ spec:
     rules: []
   description: ''
   color: ''
+---
+metadata:
+  project: default
+  global-namespace: acme
+  service-groups: sg-user-redis
+spec:
+  id: sg-catalog
+  display_name: sg-user-redis
+  rules:
+    fn: OR
+    match:
+    - fn: EXACT
+      key: name
+      type: NAME
+      value: user-redis
+    rules: []
+  description: ''
+  color: ''

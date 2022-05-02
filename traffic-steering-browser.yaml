@@ -1,0 +1,27 @@
+metadata:
+  project: default
+  global-namespace: acme
+  traffic-routing-policies: tfr-policy-hdr-browser
+spec:
+  description: browser based policy to route traffic
+  service: shopping
+  traffic_policy:
+    http:
+    - name: chrome-rule
+      matches:
+        headers:
+          type: RegularExpression
+          value:
+          - k: User-Agent
+            v: ".*rome.*"
+      targets:
+      - service_version: shopping-v1
+    - name: firefox-rule
+      matches:
+        headers:
+          type: RegularExpression
+          value:
+          - k: User-Agent
+            v: ".*ire.*"
+      targets:
+      - service_version: shopping-v2

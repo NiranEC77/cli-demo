@@ -9,7 +9,7 @@ spec:
     http:
     - name: chrome-rule
       matches:
-        headers:
+      - headers:
           type: RegularExpression
           value:
           - k: User-Agent
@@ -18,7 +18,7 @@ spec:
       - service_version: shopping-v1
     - name: firefox-rule
       matches:
-        headers:
+      - headers:
           type: RegularExpression
           value:
           - k: User-Agent

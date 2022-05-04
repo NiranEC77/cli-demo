@@ -1,0 +1,15 @@
+metadata:
+  project: default
+  global-namespace: acme
+  traffic-routing-policies: tfr-policy-wgt
+spec:
+  description: policy to split 50% of traffic to version 1 and 50% of traffic to version 2
+  service: shopping
+  traffic_policy:
+    http:
+    - name: weight-based
+      targets:
+      - service_version: shopping-v1
+        weight: 70
+      - service_version: shopping-v2
+        weight: 30

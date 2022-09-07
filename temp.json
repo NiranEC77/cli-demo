@@ -1,0 +1,138 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Namespace\",\"metadata\":{\"annotations\":{},\"labels\":{\"istio-injection\":\"disabled\"},\"name\":\"istio-system\"}}\n"
+    },
+    "creationTimestamp": "2022-05-10T01:45:56Z",
+    "deletionTimestamp": "2022-05-10T01:51:02Z",
+    "labels": {
+      "istio-injection": "disabled"
+    },
+    "managedFields": [
+      {
+        "apiVersion": "v1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              ".": {},
+              "f:kubectl.kubernetes.io/last-applied-configuration": {}
+            },
+            "f:labels": {
+              ".": {},
+              "f:istio-injection": {}
+            }
+          },
+          "f:status": {
+            "f:phase": {}
+          }
+        },
+        "manager": "kubectl-client-side-apply",
+        "operation": "Update",
+        "time": "2022-05-10T01:45:56Z"
+      },
+      {
+        "apiVersion": "v1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              ".": {},
+              "k:{\"type\":\"NamespaceContentRemaining\"}": {
+                ".": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"NamespaceDeletionContentFailure\"}": {
+                ".": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"NamespaceDeletionDiscoveryFailure\"}": {
+                ".": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"NamespaceDeletionGroupVersionParsingFailure\"}": {
+                ".": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"NamespaceFinalizersRemaining\"}": {
+                ".": {},
+                "f:lastTransitionTime": {},
+                "f:message": {},
+                "f:reason": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            }
+          }
+        },
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "time": "2022-05-10T01:51:09Z"
+      }
+    ],
+    "name": "istio-system",
+    "resourceVersion": "3358154",
+    "uid": "777fa96d-c024-48bf-ad71-ffd50a219ea5"
+  },
+  "spec": {
+    "finalizers": []
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastTransitionTime": "2022-05-10T01:51:07Z",
+        "message": "Discovery failed for some groups, 1 failing: unable to retrieve the complete list of server APIs: data.packaging.carvel.dev/v1alpha1: the server is currently unable to handle the request",
+        "reason": "DiscoveryFailed",
+        "status": "True",
+        "type": "NamespaceDeletionDiscoveryFailure"
+      },
+      {
+        "lastTransitionTime": "2022-05-10T01:51:09Z",
+        "message": "All legacy kube types successfully parsed",
+        "reason": "ParsedGroupVersions",
+        "status": "False",
+        "type": "NamespaceDeletionGroupVersionParsingFailure"
+      },
+      {
+        "lastTransitionTime": "2022-05-10T01:51:09Z",
+        "message": "All content successfully deleted, may be waiting on finalization",
+        "reason": "ContentDeleted",
+        "status": "False",
+        "type": "NamespaceDeletionContentFailure"
+      },
+      {
+        "lastTransitionTime": "2022-05-10T01:52:17Z",
+        "message": "All content successfully removed",
+        "reason": "ContentRemoved",
+        "status": "False",
+        "type": "NamespaceContentRemaining"
+      },
+      {
+        "lastTransitionTime": "2022-05-10T01:52:17Z",
+        "message": "All content-preserving finalizers finished",
+        "reason": "ContentHasNoFinalizers",
+        "status": "False",
+        "type": "NamespaceFinalizersRemaining"
+      }
+    ],
+    "phase": "Terminating"
+  }
+}

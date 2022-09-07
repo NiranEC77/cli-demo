@@ -12,13 +12,13 @@ spec:
       match: default
       type: EXACT
     cluster:
-      match: aws-tmc-us-east
+      match: aws-eks-east01
       type: EXACT
   - namespace:
       match: default
       type: EXACT
     cluster:
-      match: aws-tmc-us-west
+      match: aws-eks-west01
       type: EXACT
   - namespace:
       match: default

@@ -1,10 +1,10 @@
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-catalog
+  service-groups: sgcatalog
 spec:
-  id: sg-catalog
-  display_name: sg-catalog
+  id: sgcatalog
+  display_name: sgcatalog
   rules:
     fn: OR
     match:
@@ -19,10 +19,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-shopping
+  service-groups: sgshopping
 spec:
-  id: sg-shopping
-  display_name: sg-shopping
+  id: sgshopping
+  display_name: sgshopping
   rules:
     fn: OR
     match:
@@ -37,10 +37,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-order
+  service-groups: sgorder
 spec:
-  id: sg-order
-  display_name: sg-order
+  id: sgorder
+  display_name: sgorder
   rules:
     fn: OR
     match:
@@ -55,10 +55,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-order-mongo
+  service-groups: sgordermongo
 spec:
-  id: sg-order-mongo
-  display_name: sg-order-mongo
+  id: sgordermongo
+  display_name: sgordermongo
   rules:
     fn: OR
     match:
@@ -73,10 +73,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-users
+  service-groups: sgusers
 spec:
-  id: sg-users
-  display_name: sg-users
+  id: sgusers
+  display_name: sgusers
   rules:
     fn: OR
     match:
@@ -91,10 +91,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-users-mongo
+  service-groups: sgusersmongo
 spec:
-  id: sg-users-mongo
-  display_name: sg-users-mongo
+  id: sgusersmongo
+  display_name: sgusersmongo
   rules:
     fn: OR
     match:
@@ -109,10 +109,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-cart
+  service-groups: sgcart
 spec:
-  id: sg-cart
-  display_name: sg-cart
+  id: sgcart
+  display_name: sgcart
   rules:
     fn: OR
     match:
@@ -127,10 +127,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-payment
+  service-groups: sgpayment
 spec:
-  id: sg-payment
-  display_name: sg-payment
+  id: sgpayment
+  display_name: sgpayment
   rules:
     fn: OR
     match:
@@ -145,10 +145,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-catalog-mongo
+  service-groups: sgcatalogmongo
 spec:
-  id: sg-catalog
-  display_name: sg-catalog-mongo
+  id: sgcatalogmongo
+  display_name: sgcatalogmongo
   rules:
     fn: OR
     match:
@@ -163,10 +163,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-cart-redis
+  service-groups: sgcartredis
 spec:
-  id: sg-catalog
-  display_name: sg-cart-redis
+  id: sgcartredis
+  display_name: sgcartredis
   rules:
     fn: OR
     match:
@@ -181,10 +181,10 @@ spec:
 metadata:
   project: default
   global-namespace: acme
-  service-groups: sg-user-redis
+  service-groups: sguserredis
 spec:
-  id: sg-catalog
-  display_name: sg-user-redis
+  id: sguserredis
+  display_name: sguserredis
   rules:
     fn: OR
     match:

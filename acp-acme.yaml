@@ -5,10 +5,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-catalog
+    - name: sgcatalog
   source: 
     service_group:
-    - name: sg-shopping
+    - name: sgshopping
   action: ALLOW
   match:
   - {}
@@ -20,10 +20,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-users
+    - name: sgusers
   source:
     service_group:
-    - name: sg-shopping
+    - name: sgshopping
   action: ALLOW
   match:
   - {}
@@ -35,10 +35,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-order
+    - name: sgorder
   source:
     service_group:
-    - name: sg-shopping
+    - name: sgshopping
   action: ALLOW
   match:
   - {}
@@ -50,10 +50,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-cart
+    - name: sgcart
   source:
     service_group:
-    - name: sg-shopping
+    - name: sgshopping
   action: ALLOW
   match:
   - {}
@@ -65,10 +65,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-order-mongo
+    - name: sgordermongo
   source:
     service_group:
-    - name: sg-order
+    - name: sgorder
   action: ALLOW
   match:
   - {}
@@ -80,10 +80,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-payment
+    - name: sgpayment
   source:
     service_group:
-    - name: sg-order
+    - name: sgorder
   action: ALLOW
   match:
   - {}
@@ -95,10 +95,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-catalog-mongo
+    - name: sgcatalogmongo
   source:
     service_group:
-    - name: sg-catalog
+    - name: sgcatalog
   action: ALLOW
   match:
   - {}
@@ -110,10 +110,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-users-mongo
+    - name: sgusersmongo
   source:
     service_group:
-    - name: sg-users
+    - name: sgusers
   action: ALLOW
   match:
   - {}
@@ -125,10 +125,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-cart-redis
+    - name: sgcartredis
   source:
     service_group:
-    - name: sg-cart
+    - name: sgcart
   action: ALLOW
   match:
   - {}
@@ -140,10 +140,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-user-redis
+    - name: sguserredis
   source:
     service_group:
-    - name: sg-users
+    - name: sgusers
   action: ALLOW
   match:
   - {}
@@ -155,10 +155,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-users
+    - name: sgusers
   source:
     service_group:
-    - name: sg-cart
+    - name: sgcart
   action: ALLOW
   match:
   - {}
@@ -170,10 +170,10 @@ metadata:
 spec:
   destination:
     service_group:
-    - name: sg-users
+    - name: sgusers
   source:
     service_group:
-    - name: sg-payment
+    - name: sgpayment
   action: ALLOW
   match:
   - {}

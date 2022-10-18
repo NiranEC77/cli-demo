@@ -9,25 +9,25 @@ spec:
   caType: PreExistingCA
   matchingConditions:
   - namespace:
-      match: default
+      match: acme
       type: EXACT
     cluster:
-      match: aws-eks-east01
+      match: aws-eks-west-02
       type: EXACT
   - namespace:
-      match: default
+      match: acme
       type: EXACT
     cluster:
-      match: aws-eks-west01
+      match: aws-eks-east-02
       type: EXACT
   - namespace:
-      match: default
+      match: acme
       type: EXACT
     cluster:
       match: azure-aks-us-east
       type: EXACT
   - namespace:
-      match: default
+      match: acme
       type: EXACT
     cluster:
       match: azure-aks-us-west

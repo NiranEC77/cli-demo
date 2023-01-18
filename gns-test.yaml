@@ -45,7 +45,7 @@ spec:
   external_protocol: HTTP
   ttl: 300
   public_domain:
-    external_dns_id: 5df53e88-4273-4dca-a36b-594871e708eb
+    external_dns_id: 1d200475-43e0-4393-95d3-9b626442c66d
     primary_domain: avi-tsm.tanzu-demo.com
     sub_domain: acme
     certificate_id: ''
